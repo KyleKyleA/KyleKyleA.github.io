@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <title>Mozilla splash page</title>
     <link href=https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <style>
       /* header and body setup */
@@ -96,12 +97,12 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small version of the firefox logo -->
+      <img src="firefox-logo120.png" alt="Fire fox logo">
     </header>
 
 <main>
   <article>
-    <!-- insert iframe from youtube-->
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" frameborder="0" allowfullscreen></iframe>
     <h2>Rocking the free web</h2>
 
     <p>Mozilla are a global community of technologists, thinkers, 
@@ -130,7 +131,11 @@
       <div class="clearfix"></div>
 
       <div class="red panda">
-        <!-- insert the red panda image elementg-->
+       
+        <picture>
+          <source media="(max-width: 600px)" srcset="red-panda-portrait-small.jpg">
+          <img src="red-panda-landscape.jpg" alt="a red panda">
+        </picture>
         </div>
       
 </main>
