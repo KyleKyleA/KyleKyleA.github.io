@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- 
+Name: Kyle Angeles
+    File: lab2.html
+    Date: 1/27/25
+    Section - Lab 2 part 1
+    (INFT1206)
+-->
 <html lang="en-US">
   <head>
     <title>Mozilla splash page</title>
@@ -97,7 +104,7 @@
   <body>
     <header>
       <h1>Mozilla</h1>
-      <img src="firefox-logo120.png" alt="Fire fox logo">
+      <img src="firefox_logo-only_RGB.png" alt="Fire fox logo">
     </header>
 
 <main>
@@ -112,21 +119,30 @@
     to individual growth and our collective future
    </p>
 
-   <p>Click on the images to find more infortmation about the cool stuff mozilla does<a href="https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/mdn-splash-page-finished/red-panda-landscape.jpg">Red Panada picture</a> by Mathias Appel. </p>
+   <p>Click on the images to find more infortmation about the cool stuff mozilla does. <a href="https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/mdn-splash-page-finished/red-panda-landscape.jpg">Red Panada picture</a> by Mathias Appel. </p>
   </article>
 
   <div class=""further-info">
-    <!-- inset images with src sets and sizes -->
      <a href="https://www.mozilla.org/en-US/firefox/new/">
-      <img>
+      <img srcset="firefox_logo-only_RGB.png 120w,
+                  firefox_logo-only_RGB.png 400w"
+      sizes="(max-width: 500px) 120px,
+            400px" 
+      src="firefox_logo-only_RGB.png" alt="Download firefox today">
      </a>
-     <!-- Second image-->
+     
+
       <a href="https://www.mozilla.org">
-        <img>
+        <img srcset="firefox-addons.jpg 120w,
+        firefox-addons.jpg 400w"
+        sizes="(max-width: 500px) 120px,
+        400px" 
+        src="firefox-addons.jpg" alt="Customize your own firefox browser with whole options of addons">
       </a>
-      <!-- Third image -->
+      
+
       <a href="https://developer.mozilla.org/en-US">
-        <img>
+        <img src="mdn.svg" role="img" alt="Learn more about web development with MDN">
       </a>
       <div class="clearfix"></div>
 
