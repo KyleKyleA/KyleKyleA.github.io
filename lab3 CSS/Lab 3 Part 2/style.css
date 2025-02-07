@@ -2,7 +2,7 @@ html {
     font-family: sans-serif;
 }
 /* styling the box */
-.box {
+div {
     width: 200px;
     height: 100px;
     display: flex;
