@@ -8,4 +8,23 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px auto;
+    font-size: 1.125rem;
+    background-color: #3498db;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px Black;
+    border-radius: 1px solid #2980b9;
+
+/* background overlay*/
+background-image: linear-gradient(to bottom right
+,rgba(0, 0, 0, 0) 0%,
+rgba(0, 0, 0, 0.2) 30%,
+rgba(0, 0, 0, 0.2) 100%);
+
+/*Multiple box shadows for 3D effect*/
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), /* Standard shadow for depth */
+inset 2px 2px 5px rgba(255, 255, 255, 0.3), /* Light inset shadow top left */
+inset -2px -2px 5px rgba(0, 0, 0, 0.3); /*Dark inset shadow bottom right */
+
 }
+
