@@ -3,28 +3,32 @@ html {
 }
 /* styling the box */
 div {
-    width: 200px;
-    height: 100px;
+    width: 200px; /* Reasonable width for a large box */
+    height: 100px; /* Adjusted height */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px auto;
-    font-size: 1.125rem;
-    background-color: #3498db;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px Black;
-    border-radius: 1px solid #2980b9;
+    margin: 100px auto; /* Centers the box horizontally */
+    font-size: 1.2rem; /* Around 17-18px (1rem = 16px, so 1.2rem = 19.2px) */
+    font-weight: bold;
+    background-color: red; /* Base color */
+    color: white; /* Contrasting text color */
+    text-shadow: 2px 2px 4px black; /* Black text shadow */
+    border-radius: 15px; /* Subtle rounded corners */
+    border: 1px solid darkred; /* Slightly darker border than the base color */
 
-/* background overlay*/
-background-image: linear-gradient(to bottom right
-,rgba(0, 0, 0, 0) 0%,
-rgba(0, 0, 0, 0.2) 30%,
-rgba(0, 0, 0, 0.2) 100%);
+    /* Gradient overlay */
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
 
-/*Multiple box shadows for 3D effect*/
-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), /* Standard shadow for depth */
-inset 2px 2px 5px rgba(255, 255, 255, 0.3), /* Light inset shadow top left */
-inset -2px -2px 5px rgba(0, 0, 0, 0.3); /*Dark inset shadow bottom right */
-
+    /* Multiple box shadows */
+    box-shadow: 
+        8px 8px 15px rgba(0, 0, 0, 0.5), /* Standard shadow for raised effect */
+        inset 5px 5px 10px rgba(255, 255, 255, 0.3), /* Light inset shadow at the top left */
+        inset -5px -5px 10px rgba(0, 0, 0, 0.5); /* Dark inset shadow at the bottom right */
 }
 
