@@ -42,20 +42,6 @@
     border-bottom: 5px solid #a66;
   }
   
-  /* WRITE YOUR CODE BELOW HERE */
-
-  /* font imports goes here*/
- 
-  /*
-  Lovato light font obtained from fontspring.com,
-originally created by Philatype
-See https://www.fontspring.com/fonts/philatype/lovato
-
-Josefin slab bold obtained from fontsquirrel.com,
-originally created by Typemade
-See https://www.fontsquirrel.com/fonts/josefin-slab 
-
-*/
 @font-face {
   font-family: 'lovatolight';
   src: url('fonts/Lovato-Light-webfont.eot');
