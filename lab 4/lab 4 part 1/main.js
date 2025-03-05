@@ -36,13 +36,14 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-
+    newstory = newstory.replaceAll('bob', name );
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300);
     const temperature =  Math.round(94);
-
+    newstory = newstory.replaceAll('94 fahrenheit',temperature )
+    newstory = newstory.replaceAll('300 pounds',weight )
   }
 
   story.textContent = ;
