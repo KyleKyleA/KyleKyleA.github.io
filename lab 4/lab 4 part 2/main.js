@@ -13,8 +13,12 @@ const ImageFileNames = ['pic1.jpg' , 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.j
  * Declare an object for alt texts
  */
 const altTexts = {
-    
-}
+        'pic1.jpg' : 'A beautiful sunrise over the mountains',
+        'pic2.jpg' : 'A tranquil lake in the forest',
+        'pic3.jpg' : 'A vast desert landscape',
+        'pic4.jpg' : 'A stunning waterfall',
+        'pic5.jpg' : 'A colorful sunset at the beach'
+};
 /**
  * Using a loop through images and add them to the thumb-bar
  */
