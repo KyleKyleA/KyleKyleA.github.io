@@ -22,24 +22,29 @@ const altTexts = {
 /**
  * Using a loop through images and add them to the thumb-bar
  */
-t imageFilenames.forEach(filename => {
+for (const image of images) {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', `images/${filename}`);
-    newImage.setAttribute('alt', altTexts[filename]);
+    newImage.setAttribute('src', `images/${images}`);
+    newImage.setAttribute('alt', alts[image]);
     thumbBar.appendChild(newImage);
-
-/**
- * Add click event listener to each image
- */
-btn.addEventListener("click", () => {
-    DisplayedImage.setAttribute('src',`images/${filename}`);
-    DisplayedImage.setAttribute('alt', altTexts[filename]);
+    newImage.addEventListener('click', e => {
+        DisplayedImage.src = e.target.src;
+        DisplayedImage.alt = e.target.alt;
+    })
 }
 /**
  * Writing a handler that runs the darken and lightn button
  */
 btn.addEventListener('click', () => {
-    if (btn.getAttribute('class') === 'dark') {
-        btn.setAttribute('class', 'light')
+    const btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+      btn.setAttribute('class','light');
+      btn.textContent = 'Lighten';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    } else {
+      btn.setAttribute('class','dark');
+      btn.textContent = 'Darken';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0)';
     }
-}
+});
+
