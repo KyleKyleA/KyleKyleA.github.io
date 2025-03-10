@@ -31,14 +31,15 @@ t imageFilenames.forEach(filename => {
 /**
  * Add click event listener to each image
  */
-
-
-
-
-
+btn.addEventListener("click", () => {
+    DisplayedImage.setAttribute('src',`images/${filename}`);
+    DisplayedImage.setAttribute('alt', altTexts[filename]);
+}
 /**
  * Writing a handler that runs the darken and lightn button
  */
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+btn.addEventListener('click', () => {
+    if (btn.getAttribute('class') === 'dark') {
+        btn.setAttribute('class', 'light')
+    }
+}
