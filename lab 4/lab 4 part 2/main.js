@@ -1,10 +1,10 @@
 /**
  * Get references to elements
  */
-
-
-
-
+const DisplayedImage = document.querySelector('.DisplayedImage ');
+const thumbBar = document.querySelector('.thumb-Bar');
+const btn = document.querySelector('.button');
+const overlay = document.querySelector('.overlay');
 /**
  * Declare an array of image filenames
  */
@@ -22,7 +22,7 @@ const altTexts = {
 /**
  * Using a loop through images and add them to the thumb-bar
  */
- t ImageFileNames.forEach(filename => {
+t imageFilenames.forEach(filename => {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', `images/${filename}`);
     newImage.setAttribute('alt', altTexts[filename]);
