@@ -22,10 +22,11 @@ const altTexts = {
 /**
  * Using a loop through images and add them to the thumb-bar
  */
-
-
-
-
+ t ImageFileNames.forEach(filename => {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', `images/${filename}`);
+    newImage.setAttribute('alt', altTexts[filename]);
+    thumbBar.appendChild(newImage);
 
 /**
  * Add click event listener to each image
