@@ -74,7 +74,15 @@ update() {
   while (balls.length < 25) {
     const size = random(10, 20);
     const ball = new ball(
-        
-    )
+        // ball position always drawn at least one ball width
+        // away from the edge of the canvas, to aovid drawing errors
+        random(0 + size, width - size),
+        random(0 + size, height - size),
+        random(-7, 7),
+        random(-7, 7),
+        randomRGB(),
+        size,
+    );
+    
   }
    
