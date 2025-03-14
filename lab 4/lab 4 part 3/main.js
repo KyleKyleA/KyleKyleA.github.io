@@ -3,7 +3,7 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-const width = (canvas.width = window.innerHeight);
+const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
 
@@ -18,6 +18,16 @@ function random(min, max) {
 function randomRGB() {
     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+
+class Ball {
+  constructor(x, y, velX, velY, color, size) {
+      this.x = x;
+      this.y = y;
+      this.velX = velX;
+      this.velY = velY;
+      this.color = color;
+      this.size = size;
+  }
 
 draw() {
     ctx.beginPath();
@@ -49,7 +59,7 @@ update() {
 
   collisionDetect() {
     for (const ball of balls) {
-      if (!(this === ball)) {
+      if (!(this !== ball)) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -60,34 +70,34 @@ update() {
       }
     }
   } 
+}
 
-
-  const balls = [];
-  while (balls.length < 25) {
-    const size = random(10, 20);
-    const ball = new ball(
-        // ball position always drawn at least one ball width
-        // away from the edge of the canvas, to aovid drawing errors
-        random(0 + size, width - size),
-        random(0 + size, height - size),
-        random(-7, 7),
-        random(-7, 7),
-        randomRGB(),
-        size,
-    );
-
-    balls.push(ball);
+      const balls = [];
+        while (balls.length < 25) {
+      const size = random(10, 20);
+      const ball = new Ball(
+          random(size, width - size),
+          random(size, height - size),
+          random(-7, 7),
+          random(-7, 7),
+          randomRGB(),
+          size
+      );
+      balls.push(ball);
   }
 
+
   function loop() {
-    ctx.fillStyle = "rgb(0 0 0/ 25%)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
         ball.draw();
         ball.update();
+        ball.collisionDetect();
     }
+
     requestAnimationFrame(loop);
-  }
-  (loop);
+}
+loop();
    
