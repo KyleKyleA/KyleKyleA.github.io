@@ -31,8 +31,8 @@ for (const image of images) {
   thumbBar.appendChild(newImage);
 
   newImage.addEventListener('click', (e) => {
-      displayedImage.src = e.target.src;
-      displayedImage.alt = e.target.alt;
+      DisplayedImage.src = e.target.src;
+      DisplayedImage.alt = e.target.alt;
   });
 }
 /**
