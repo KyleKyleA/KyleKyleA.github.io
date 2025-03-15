@@ -11,7 +11,7 @@ const overlay = document.querySelector('.overlay');
  */
 const images = [
   'pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg',
-  'pic6.jpg', 'pic7.jpg', 'pic8.jpg'  // <-- Add more images here
+  // <-- Add more images here
 ];
 /**
  * Declare an object for alt texts
@@ -22,10 +22,7 @@ const alts = {
         'pic3.jpg' : 'Purple and white pansies',
         'pic4.jpg' : 'Section of wall from a pharoahs\'s tomb',
         'pic5.jpg' : 'Large moth on a leaf',
-        'pic6.jpg' : 'Sunset over mountains',
-        'pic7.jpg' : 'City skyline at night',
-        'pic8.jpg' : 'Beautiful beach with palms'
-};
+}
 /**
  * Using a loop through images and add them to the thumb-bar
  */
