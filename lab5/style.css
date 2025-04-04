@@ -38,4 +38,23 @@ p, li, table {
     font-size: 2.2rem;
 }
 
-/*
+/* Header layout */
+div[class="nav"], article, footer, .secondary {
+    background-color: green;
+}
+
+article, footer, .secondary {
+    padding: 10px 30px;
+}
+
+article {
+    margin-right: 10px;
+}
+
+div[class="nav"] {
+    height: 50px;
+    background-color: ff80ff;
+    display: flex;
+    padding: 1% 0;
+    margin-bottom: 10px;
+  }
